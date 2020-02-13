@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Griffy';
+  src: local('Griffy'), url('./fonts/Griffy-Regular.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'Griffy' !important;
+  font-size: 600%;
+  font-weight: 400;
+}
+
+h2 {
+  padding-top: -30px;
+}

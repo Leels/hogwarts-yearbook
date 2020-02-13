@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import FacultyPage from './components/FacultyPage';
+import Gryffindor from './components/Gryffindor';
+import Hufflepuff from './components/Hufflepuff';
+import Ravenclaw from './components/Ravenclaw';
+import Slytherin from './components/Slytherin'
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Header />
+    <Navbar />
+    <Switch>
+      <Route exact path='/' component={FacultyPage} />
+      <Route path='/gryffindor' component={Gryffindor} />
+      <Route path='/hufflepuff' component={Hufflepuff} />
+      <Route path='/ravenclaw' component={Ravenclaw} />
+      <Route path='/slytherin' component={Slytherin} />
+    </Switch>
+    <Footer />
     </div>
   );
 }
