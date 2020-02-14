@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import FacultyPage from './components/FacultyPage';
+import Faculty from './components/Faculty';
 import Gryffindor from './components/Gryffindor';
 import Hufflepuff from './components/Hufflepuff';
 import Ravenclaw from './components/Ravenclaw';
@@ -16,7 +16,7 @@ function App() {
     <Header />
     <Navbar />
     <Switch>
-      <Route exact path='/' component={FacultyPage} />
+      <Route exact path='/' component={Faculty} />
       <Route path='/gryffindor' component={Gryffindor} />
       <Route path='/hufflepuff' component={Hufflepuff} />
       <Route path='/ravenclaw' component={Ravenclaw} />
